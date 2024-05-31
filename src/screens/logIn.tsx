@@ -8,13 +8,13 @@ import {
   RememberMeButton,
 } from "../components";
 
-export const LoginScreen = () => {
+export const LogInScreen = () => {
   const [email, setEmail] = useState("maria@faboa.co");
   const [password, setPassword] = useState("maria@");
 
   return (
     <div className="flex h-screen font-heebo">
-      <div className="w-1/2 bg-primary-900 flex flex-col justify-center items-center text-center p-10">
+      <div className="w-1/2 bg-primary-700 flex flex-col justify-center items-center text-center p-10">
         <Image
           src="/logo.svg"
           alt="FABOA Logo"
@@ -81,7 +81,7 @@ export const LoginScreen = () => {
           </CustomButton>
 
           <p className="mt-4 font-medium text-gray-600 text-center cursor-pointer">
-            <CustomLink href="/register">Forgot Password</CustomLink>
+            <CustomLink href="/signup">Forgot Password</CustomLink>
           </p>
         </form>
       </div>
