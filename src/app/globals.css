@@ -6,6 +6,22 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --heebo-font: "Heebo", sans-serif;
+}
+
+.font-normal {
+  font-weight: 400;
+  font-family: var(--heebo-font);
+}
+
+.font-medium {
+  font-weight: 500;
+  font-family: var(--heebo-font);
+}
+
+.font-semibold {
+  font-weight: 700;
+  font-family: var(--heebo-font);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +40,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: var(--heebo-font);
 }
 
 @layer utilities {
