@@ -18,6 +18,27 @@
   --berlingske-font: "Berlingske Serif", serif;
 }
 
+/* Custom Styles */
+.custom-checkbox {
+  @apply relative inline-flex items-center;
+
+  input {
+    @apply opacity-0 w-0 h-0;
+  }
+
+  .checkmark {
+    @apply inline-block h-5 w-5 rounded relative;
+  }
+
+  input:checked + .checkmark::after {
+    content: "";
+    @apply absolute left-1/2 top-1/2 w-1.5 h-2.5 border-white;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
 /* .font-heebo-normal {
   font-weight: 400;
   font-family: var(--heebo-font);

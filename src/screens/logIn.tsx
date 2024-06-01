@@ -1,16 +1,17 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   CustomButton,
+  CustomCheckbox,
   CustomLink,
   InputField,
-  RememberMeButton,
 } from "../components";
 
 export const LogInScreen = () => {
   const [email, setEmail] = useState("maria@faboa.co");
   const [password, setPassword] = useState("maria@");
+  const [rememberMe, setRememberMe] = useState(false);
 
   return (
     <div className="flex h-screen font-heebo">
@@ -57,7 +58,7 @@ export const LogInScreen = () => {
             src="/envelop.svg"
             alt="email"
             type="email"
-            placeholder="Email Address"
+            label="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="my-4"
@@ -66,21 +67,31 @@ export const LogInScreen = () => {
             src="/lock.svg"
             alt="password"
             type="password"
-            placeholder="Password"
+            label="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="my-4"
           />
 
-          <RememberMeButton />
+          <div className="ml-4 mb-12">
+            <CustomCheckbox
+              checked={rememberMe}
+              onChange={(e) => {
+                setRememberMe(!rememberMe);
+              }}
+            >
+              Remember me
+            </CustomCheckbox>
+          </div>
+
           <CustomButton
             className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
-            type="button"
+            type="submit"
           >
             Log In
           </CustomButton>
 
-          <p className="mt-4 font-heebo-medium text-gray-600 text-center cursor-pointer">
+          <p className="mt-4 font-heebo-medium text-gray-600 text-center cursor-pointer text-sm">
             <CustomLink href="/signup">Forgot Password</CustomLink>
           </p>
         </form>

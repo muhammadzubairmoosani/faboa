@@ -1,12 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { CustomButton, CustomLink, InputField } from "../components";
+import {
+  CustomButton,
+  CustomLink,
+  InputField,
+  CustomCheckbox,
+} from "../components";
 
 export const SignUpScreen = () => {
   const [name, setName] = useState("maria");
   const [email, setEmail] = useState("maria@faboa.co");
   const [password, setPassword] = useState("maria@");
+  const [rememberMe, setRememberMe] = useState(false);
 
   return (
     <div className="flex h-screen">
@@ -51,7 +57,7 @@ export const SignUpScreen = () => {
           <InputField
             src="/user.svg"
             alt="full name"
-            placeholder="Full Name"
+            label="Full Name"
             className="my-4"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -60,7 +66,7 @@ export const SignUpScreen = () => {
             src="/envelop.svg"
             alt="email"
             type="email"
-            placeholder="Email Address"
+            label="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="my-4"
@@ -69,20 +75,31 @@ export const SignUpScreen = () => {
             src="/lock.svg"
             alt="password"
             type="password"
-            placeholder="Password"
+            label="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="my-4"
           />
 
+          <div className="ml-4 mb-12">
+            <CustomCheckbox
+              checked={rememberMe}
+              onChange={(e) => {
+                setRememberMe(!rememberMe);
+              }}
+            >
+              Remember me
+            </CustomCheckbox>
+          </div>
+
           <CustomButton
             className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
-            type="button"
+            type="submit"
           >
             Register
           </CustomButton>
 
-          <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer">
+          <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer text-sm">
             Already have an account?{" "}
             <CustomLink className="text-secondary-600 font-heebo-bold" href="/">
               Log in
