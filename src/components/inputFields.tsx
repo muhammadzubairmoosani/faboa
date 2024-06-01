@@ -35,7 +35,7 @@ export const InputField: FC<InputFieldProps> = ({
       <input
         type={type}
         placeholder={placeholder}
-        className="appearance-none bg-transparent border-none w-full text-gray-600 leading-tight focus:outline-none font-normal"
+        className="appearance-none bg-transparent border-none w-full text-gray-600 leading-tight focus:outline-none font-heebo-normal"
         value={value}
         onChange={onChange}
       />

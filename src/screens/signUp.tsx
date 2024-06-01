@@ -29,10 +29,10 @@ export const SignUpScreen = () => {
           priority
         />
 
-        <p className="text-xl text-secondary-50 font-medium mb-8">
+        <p className="text-xl text-secondary-50 font-heebo-medium mb-8">
           THE MOST ICONIC TRAVEL CLUB
         </p>
-        <CustomButton className="bg-primary-500 text-white py-2 px-8 font-normal rounded-full">
+        <CustomButton className="bg-primary-500 text-white py-2 px-8 font-heebo-normal rounded-full">
           Read More
         </CustomButton>
       </div>
@@ -40,10 +40,10 @@ export const SignUpScreen = () => {
       <div className="w-1/2 bg-white flex flex-col justify-center items-center p-10">
         <form className="w-2/3">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl mb-4 text-primary-700 font-semibold">
+            <h2 className="text-4xl mb-4 text-primary-700 font-heebo-bold">
               Hello!
             </h2>
-            <p className="text-lg mb-8 text-primary-700 font-normal">
+            <p className="text-lg mb-8 text-primary-700 font-heebo-normal">
               Sign Up to Get Started
             </p>
           </div>
@@ -76,15 +76,15 @@ export const SignUpScreen = () => {
           />
 
           <CustomButton
-            className="bg-primary-700 font-medium rounded-full text-white py-4 px-4 w-full"
+            className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
             type="button"
           >
             Register
           </CustomButton>
 
-          <p className="mt-4 font-normal text-gray-600 text-center cursor-pointer">
+          <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer">
             Already have an account?{" "}
-            <CustomLink className="text-secondary-600 font-semibold" href="/">
+            <CustomLink className="text-secondary-600 font-heebo-bold" href="/">
               Log in
             </CustomLink>
           </p>

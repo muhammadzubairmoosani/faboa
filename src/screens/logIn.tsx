@@ -33,11 +33,11 @@ export const LogInScreen = () => {
           priority
         />
 
-        <p className="text-xl text-secondary-50 font-medium mb-8">
+        <p className="text-xl text-secondary-50 font-heebo-medium mb-8">
           THE MOST ICONIC TRAVEL CLUB
         </p>
 
-        <CustomButton className="bg-primary-500 text-white font-normal py-2 px-8 rounded-full">
+        <CustomButton className="bg-primary-500 text-white font-heebo-normal py-2 px-8 rounded-full">
           Read More
         </CustomButton>
       </div>
@@ -45,10 +45,10 @@ export const LogInScreen = () => {
       <div className="w-1/2 bg-white flex flex-col justify-center items-center p-10">
         <form className="w-2/3">
           <div className="flex flex-col justify-center items-start">
-            <h2 className="text-4xl mb-4 text-primary-700 font-semibold">
+            <h2 className="text-4xl mb-4 text-primary-700 font-berlingske-semibold">
               Hello Maria!
             </h2>
-            <p className="text-lg mb-8 text-primary-700 font-normal">
+            <p className="text-lg mb-8 text-primary-700 font-heebo-normal">
               Welcome Back
             </p>
           </div>
@@ -74,13 +74,13 @@ export const LogInScreen = () => {
 
           <RememberMeButton />
           <CustomButton
-            className="bg-primary-700 font-medium rounded-full text-white py-4 px-4 w-full"
+            className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
             type="button"
           >
             Log In
           </CustomButton>
 
-          <p className="mt-4 font-medium text-gray-600 text-center cursor-pointer">
+          <p className="mt-4 font-heebo-medium text-gray-600 text-center cursor-pointer">
             <CustomLink href="/signup">Forgot Password</CustomLink>
           </p>
         </form>
