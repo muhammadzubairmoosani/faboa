@@ -15,7 +15,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   className = "",
   ...props
 }) => (
-  <button className={`py-2 px-4 ${className}`} {...props}>
+  <button className={`py-2 px-4 cursor-pointer ${className}`} {...props}>
     {children}
   </button>
 );

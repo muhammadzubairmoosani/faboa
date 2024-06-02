@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import {
   CustomButton,
+  CustomCheckbox,
   CustomLink,
   InputField,
-  CustomCheckbox,
 } from "../components";
 
 export const SignUpScreen = () => {
@@ -13,6 +15,11 @@ export const SignUpScreen = () => {
   const [email, setEmail] = useState("maria@faboa.co");
   const [password, setPassword] = useState("maria@");
   const [rememberMe, setRememberMe] = useState(false);
+  const router = useRouter();
+
+  const handleSubmit = () => {
+    router.push("/email-verification");
+  };
 
   return (
     <div className="flex h-screen">
@@ -44,7 +51,7 @@ export const SignUpScreen = () => {
       </div>
 
       <div className="w-1/2 bg-white flex flex-col justify-center items-center p-10">
-        <form className="w-2/3">
+        <div className="w-2/3">
           <div className="flex flex-col justify-center">
             <h2 className="text-4xl mb-4 text-primary-700 font-heebo-bold">
               Hello!
@@ -95,10 +102,11 @@ export const SignUpScreen = () => {
           <CustomButton
             className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
             type="submit"
+            onClick={handleSubmit}
           >
             Register
           </CustomButton>
-        </form>
+        </div>
         <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer text-sm">
           Already have an account?{" "}
           <CustomLink className="text-secondary-600 font-heebo-bold" href="/">
