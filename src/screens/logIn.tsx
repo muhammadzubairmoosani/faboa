@@ -14,7 +14,7 @@ export const LogInScreen = () => {
   const [rememberMe, setRememberMe] = useState(false);
 
   return (
-    <div className="flex h-screen font-heebo">
+    <div className="flex h-screen">
       <div className="w-1/2 bg-primary-700 flex flex-col justify-center items-center text-center p-10">
         <Image
           src="/logo.svg"
