@@ -72,8 +72,10 @@ export const LogInScreen = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="my-4"
           />
-
-          <div className="ml-4 mb-12">
+          <p className="mt-4 font-heebo-medium text-gray-600 text-right cursor-pointer text-sm">
+            <CustomLink href="/forgot-password">Forgot Password</CustomLink>
+          </p>
+          <div className="ml-4 mb-10">
             <CustomCheckbox
               checked={rememberMe}
               onChange={(e) => {
@@ -90,11 +92,16 @@ export const LogInScreen = () => {
           >
             Log In
           </CustomButton>
-
-          <p className="mt-4 font-heebo-medium text-gray-600 text-center cursor-pointer text-sm">
-            <CustomLink href="/signup">Forgot Password</CustomLink>
-          </p>
         </form>
+        <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer text-sm">
+          You Don&apos;t have an account?{" "}
+          <CustomLink
+            className="text-secondary-600 font-heebo-bold"
+            href="/signup"
+          >
+            Sign Up
+          </CustomLink>
+        </p>
       </div>
     </div>
   );

@@ -81,7 +81,7 @@ export const SignUpScreen = () => {
             className="my-4"
           />
 
-          <div className="ml-4 mb-12">
+          <div className="ml-4 mb-10">
             <CustomCheckbox
               checked={rememberMe}
               onChange={(e) => {
@@ -98,14 +98,13 @@ export const SignUpScreen = () => {
           >
             Register
           </CustomButton>
-
-          <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer text-sm">
-            Already have an account?{" "}
-            <CustomLink className="text-secondary-600 font-heebo-bold" href="/">
-              Log in
-            </CustomLink>
-          </p>
         </form>
+        <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer text-sm">
+          Already have an account?{" "}
+          <CustomLink className="text-secondary-600 font-heebo-bold" href="/">
+            Log in
+          </CustomLink>
+        </p>
       </div>
     </div>
   );
