@@ -1,9 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import { AuthWrapper, CustomButton, CustomLink } from "../components";
 import { useSearchParams } from "next/navigation";
 
-export default function EmailVerification() {
+function EmailVerificationContent() {
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
 
@@ -27,5 +28,13 @@ export default function EmailVerification() {
         </CustomButton>
       </CustomLink>
     </AuthWrapper>
+  );
+}
+
+export default function EmailVerification() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <EmailVerificationContent />
+    </Suspense>
   );
 }

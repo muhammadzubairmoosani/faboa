@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+
+import { useState, Suspense } from "react";
 import { CustomButton, AuthWrapper } from "../components";
 import { useSearchParams } from "next/navigation";
 
-export default function CodeVerification() {
+const CodeVerificationContent = () => {
   const [verificationCode, setVerificationCode] = useState(["", "", "", ""]);
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
@@ -55,5 +56,13 @@ export default function CodeVerification() {
         </CustomButton>
       </form>
     </AuthWrapper>
+  );
+};
+
+export default function CodeVerification() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CodeVerificationContent />
+    </Suspense>
   );
 }
