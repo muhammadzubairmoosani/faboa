@@ -3,12 +3,12 @@ import { useState } from "react";
 import { CustomButton, AuthWrapper } from "../components";
 
 export const CodeVerificationScreen = () => {
-  const [values, setValues] = useState(["", "", "", ""]);
+  const [verificationCode, setVerificationCode] = useState(["", "", "", ""]);
 
-  const handleChange = (index: number, value: string) => {
-    const newValues = [...values];
+  const updateVerificationCode = (index: number, value: string) => {
+    const newValues = [...verificationCode];
     newValues[index] = value;
-    setValues(newValues);
+    setVerificationCode(newValues);
   };
 
   return (
@@ -24,7 +24,7 @@ export const CodeVerificationScreen = () => {
 
       <form>
         <div className="flex space-x-4 mb-10">
-          {values.map((value, index) => (
+          {verificationCode.map((value, index) => (
             <div
               key={index}
               className="relative w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center"
@@ -33,7 +33,7 @@ export const CodeVerificationScreen = () => {
                 type="text"
                 maxLength={1}
                 value={value}
-                onChange={(e) => handleChange(index, e.target.value)}
+                onChange={(e) => updateVerificationCode(index, e.target.value)}
                 required
                 className=" text-gray-900 absolute w-full h-full text-center text-xl bg-transparent focus:outline-none"
               />

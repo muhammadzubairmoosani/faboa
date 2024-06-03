@@ -1,30 +1,28 @@
-import { ButtonHTMLAttributes, ChangeEvent, FC, ReactNode } from "react";
+import { ButtonHTMLAttributes, ChangeEvent, PropsWithChildren } from "react";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
   className?: string;
 }
 interface CustomCheckboxProps {
-  children: ReactNode;
   checked: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const CustomButton: React.FC<CustomButtonProps> = ({
+export const CustomButton = ({
   children,
   className = "",
   ...props
-}) => (
+}: PropsWithChildren<CustomButtonProps>) => (
   <button className={`py-2 px-4 cursor-pointer ${className}`} {...props}>
     {children}
   </button>
 );
 
-export const CustomCheckbox: FC<CustomCheckboxProps> = ({
+export const CustomCheckbox = ({
   children,
   checked,
   onChange,
-}) => {
+}: PropsWithChildren<CustomCheckboxProps>) => {
   return (
     <label className="custom-checkbox flex items-center cursor-pointer space-x-2">
       <input

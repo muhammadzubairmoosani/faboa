@@ -1,6 +1,12 @@
+"use client";
+
 import { AuthWrapper, CustomButton, CustomLink } from "../components";
+import { useSearchParams } from "next/navigation";
 
 export const EmailVerificationScreen = () => {
+  const searchParams = useSearchParams();
+  const email = searchParams.get("email");
+
   return (
     <AuthWrapper>
       <div className="flex flex-col justify-center items-start">
@@ -8,8 +14,8 @@ export const EmailVerificationScreen = () => {
           Confirm your email address
         </h2>
         <p className="text-lg mb-8 text-primary-700 font-heebo-normal">
-          Please check your inbox, account verification link has been sent at
-          nadeem@gmail.com
+          Please check your inbox, account verification link has been sent at{" "}
+          {email || ""}
         </p>
       </div>
       <CustomLink href="/">

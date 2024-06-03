@@ -11,15 +11,11 @@ import {
 } from "../components";
 
 export const SignUpScreen = () => {
-  const [name, setName] = useState("maria");
-  const [email, setEmail] = useState("maria@faboa.co");
-  const [password, setPassword] = useState("maria@");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const router = useRouter();
-
-  const handleSubmit = () => {
-    router.push("/email-verification");
-  };
 
   return (
     <div className="flex h-screen">
@@ -102,7 +98,11 @@ export const SignUpScreen = () => {
           <CustomButton
             className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
             type="submit"
-            onClick={handleSubmit}
+            onClick={() => {
+              router.push(
+                `/email-verification?email=${encodeURIComponent(email)}`
+              );
+            }}
           >
             Register
           </CustomButton>

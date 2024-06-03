@@ -9,8 +9,8 @@ import {
 } from "../components";
 
 export const LogInScreen = () => {
-  const [email, setEmail] = useState("maria@faboa.co");
-  const [password, setPassword] = useState("maria@");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
 
   return (

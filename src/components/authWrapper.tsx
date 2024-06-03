@@ -1,7 +1,7 @@
-import { FC, ReactNode, Fragment } from "react";
 import Image from "next/image";
+import { Fragment, PropsWithChildren } from "react";
 
-export const AuthWrapper: FC<{ children: ReactNode }> = ({ children }) => (
+export const AuthWrapper = ({ children }: PropsWithChildren) => (
   <Fragment>
     <div className="h-screen bg-primary-700 absolute w-[72px]">
       <Image
