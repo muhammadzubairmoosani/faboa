@@ -8,7 +8,7 @@ export const ResetPasswordScreen = () => {
 
   return (
     <AuthWrapper>
-      <div className="flex flex-col justify-center items-start">
+      <div className="flex flex-col justify-center items-start max-w-[307px]">
         <h2 className="text-[26px] mb-2 text-primary-700 font-berlingske-semibold">
           Set a new Password
         </h2>
@@ -17,32 +17,30 @@ export const ResetPasswordScreen = () => {
         </p>
       </div>
 
-      <form>
-        <InputField
-          src="/lock.svg"
-          alt="password"
-          type="password"
-          label="New Password"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-          className="my-4"
-        />
-        <InputField
-          src="/lock.svg"
-          alt="password"
-          type="password"
-          label="Repeat New Password"
-          value={newRepeatPassword}
-          onChange={(e) => setNewRepeatPassword(e.target.value)}
-          className="my-4"
-        />
-        <CustomButton
-          className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full max-w-[307px] mt-6"
-          type="submit"
-        >
-          Confirm
-        </CustomButton>
-      </form>
+      <InputField
+        src="/lock.svg"
+        alt="password"
+        type="password"
+        label="New Password"
+        value={newPassword}
+        onChange={(e) => setNewPassword(e.target.value)}
+        className="my-4"
+      />
+      <InputField
+        src="/lock.svg"
+        alt="password"
+        type="password"
+        label="Repeat New Password"
+        value={newRepeatPassword}
+        onChange={(e) => setNewRepeatPassword(e.target.value)}
+        className="my-4"
+      />
+      <CustomButton
+        className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full mt-6"
+        type="submit"
+      >
+        Confirm
+      </CustomButton>
     </AuthWrapper>
   );
 };
