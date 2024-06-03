@@ -1,21 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import {
   CustomButton,
   CustomCheckbox,
   CustomLink,
   InputField,
-} from "../components";
+} from "../app/components";
 
-export const SignUpScreen = () => {
-  const [name, setName] = useState("");
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-  const router = useRouter();
 
   return (
     <div className="flex h-screen">
@@ -41,30 +38,23 @@ export const SignUpScreen = () => {
         <p className="text-xl text-secondary-50 font-heebo-medium mb-8">
           THE MOST ICONIC TRAVEL CLUB
         </p>
-        <CustomButton className="bg-primary-500 text-white py-2 px-8 font-heebo-normal rounded-full">
+
+        <CustomButton className="bg-primary-500 text-white font-heebo-normal py-2 px-8 rounded-full">
           Read More
         </CustomButton>
       </div>
 
       <div className="w-1/2 bg-white flex flex-col justify-center items-center p-10">
-        <div className="w-2/3">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-4xl mb-4 text-primary-700 font-heebo-bold">
-              Hello!
+        <form className="w-2/3 max-w-[307px]">
+          <div className="flex flex-col justify-center items-start">
+            <h2 className="text-4xl mb-4 text-primary-700 font-berlingske-semibold">
+              Hello Maria!
             </h2>
             <p className="text-lg mb-8 text-primary-700 font-heebo-normal">
-              Sign Up to Get Started
+              Welcome Back
             </p>
           </div>
 
-          <InputField
-            src="/user.svg"
-            alt="full name"
-            label="Full Name"
-            className="my-4"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
           <InputField
             src="/envelop.svg"
             alt="email"
@@ -74,6 +64,7 @@ export const SignUpScreen = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="my-4"
           />
+
           <InputField
             src="/lock.svg"
             alt="password"
@@ -83,7 +74,9 @@ export const SignUpScreen = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="my-4"
           />
-
+          <p className="mt-4 font-heebo-medium text-gray-600 text-right cursor-pointer text-sm">
+            <CustomLink href="/forgot-password">Forgot Password</CustomLink>
+          </p>
           <div className="ml-4 mb-10">
             <CustomCheckbox
               checked={rememberMe}
@@ -98,22 +91,20 @@ export const SignUpScreen = () => {
           <CustomButton
             className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
             type="submit"
-            onClick={() => {
-              router.push(
-                `/email-verification?email=${encodeURIComponent(email)}`
-              );
-            }}
           >
-            Register
+            Log In
           </CustomButton>
-        </div>
+        </form>
         <p className="mt-4 font-heebo-normal text-gray-600 text-center cursor-pointer text-sm">
-          Already have an account?{" "}
-          <CustomLink className="text-secondary-600 font-heebo-bold" href="/">
-            Log in
+          You Don&apos;t have an account?{" "}
+          <CustomLink
+            className="text-secondary-600 font-heebo-bold"
+            href="/signup"
+          >
+            Sign Up
           </CustomLink>
         </p>
       </div>
     </div>
   );
-};
+}

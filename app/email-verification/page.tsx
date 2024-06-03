@@ -3,12 +3,12 @@
 import { AuthWrapper, CustomButton, CustomLink } from "../components";
 import { useSearchParams } from "next/navigation";
 
-export const EmailVerificationScreen = () => {
+export default function EmailVerification() {
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
 
   return (
-    <AuthWrapper>
+    <AuthWrapper className="max-w-[369px]">
       <div className="flex flex-col justify-center items-start">
         <h2 className="text-[26px] mb-4 text-primary-700 font-berlingske-semibold">
           Confirm your email address
@@ -28,4 +28,4 @@ export const EmailVerificationScreen = () => {
       </CustomLink>
     </AuthWrapper>
   );
-};
+}

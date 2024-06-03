@@ -1,14 +1,15 @@
 "use client";
+
 import React, { useState } from "react";
 import { CustomButton, InputField, AuthWrapper } from "../components";
 
-export const ResetPasswordScreen = () => {
+export default function ResetPassword() {
   const [newPassword, setNewPassword] = useState("");
   const [newRepeatPassword, setNewRepeatPassword] = useState("");
 
   return (
     <AuthWrapper>
-      <div className="flex flex-col justify-center items-start max-w-[307px]">
+      <div className="flex flex-col justify-center items-start">
         <h2 className="text-[26px] mb-2 text-primary-700 font-berlingske-semibold">
           Set a new Password
         </h2>
@@ -43,4 +44,4 @@ export const ResetPasswordScreen = () => {
       </CustomButton>
     </AuthWrapper>
   );
-};
+}

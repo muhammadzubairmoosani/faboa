@@ -1,9 +1,12 @@
 "use client";
 import { useState } from "react";
 import { CustomButton, AuthWrapper } from "../components";
+import { useSearchParams } from "next/navigation";
 
-export const CodeVerificationScreen = () => {
+export default function CodeVerification() {
   const [verificationCode, setVerificationCode] = useState(["", "", "", ""]);
+  const searchParams = useSearchParams();
+  const email = searchParams.get("email");
 
   const updateVerificationCode = (index: number, value: string) => {
     const newValues = [...verificationCode];
@@ -18,7 +21,7 @@ export const CodeVerificationScreen = () => {
           Forgot Password
         </h2>
         <p className="text-lg mb-8 text-primary-700 font-heebo-normal">
-          Please enter the 4 digit code sent to <b>maria@faboa.co</b>
+          Please enter the 4 digit code sent to <b>{email || ""}</b>
         </p>
       </div>
 
@@ -45,7 +48,7 @@ export const CodeVerificationScreen = () => {
         </div>
 
         <CustomButton
-          className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full max-w-[307px]"
+          className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
           type="submit"
         >
           Confirm
@@ -53,4 +56,4 @@ export const CodeVerificationScreen = () => {
       </form>
     </AuthWrapper>
   );
-};
+}

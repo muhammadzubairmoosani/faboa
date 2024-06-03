@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { Fragment, PropsWithChildren } from "react";
 
-export const AuthWrapper = ({ children }: PropsWithChildren) => (
+export const AuthWrapper = ({
+  children,
+  className,
+}: PropsWithChildren<{ className?: string }>) => (
   <Fragment>
     <div className="h-screen bg-primary-700 absolute w-[72px]">
       <Image
@@ -14,7 +17,9 @@ export const AuthWrapper = ({ children }: PropsWithChildren) => (
       />
     </div>
     <div className="flex items-center justify-center bg-white h-screen">
-      <div className="flex flex-col justify-center p-10 max-w-[450px]">
+      <div
+        className={`flex flex-col justify-center max-w-[307px] ${className}`}
+      >
         {children}
       </div>
     </div>
