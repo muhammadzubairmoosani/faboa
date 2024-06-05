@@ -116,3 +116,12 @@ body {
     text-wrap: balance;
   }
 }
+
+.text-gradient {
+  color: #c1963b;
+  /* color: linear-gradient(351deg, #c1963b -21.67%, #745a23 130.38%); */
+  /* background: var(
+    --Tertiary-Gradient-1,
+    linear-gradient(351deg, #c1963b -21.67%, #745a23 130.38%)
+  ); */
+}

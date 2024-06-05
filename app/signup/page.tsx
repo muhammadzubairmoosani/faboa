@@ -49,9 +49,13 @@ export default function SignUp() {
       <div className="w-1/2 bg-white flex flex-col justify-center items-center p-10">
         <div className="w-2/3 max-w-[307px]">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl mb-4 text-primary-700 font-heebo-bold">
+            {/* <h2 className="text-4xl mb-4 text-primary-700 font-heebo-bold">
               Hello!
+            </h2> */}
+            <h2 className="text-4xl mb-4 text-primary-700 font-berlingske-semibold">
+              Hello
             </h2>
+
             <p className="text-lg mb-8 text-primary-700 font-heebo-normal">
               Sign Up to Get Started
             </p>
