@@ -1,16 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 
 export const Header = () => {
-  const [language, setLanguage] = useState("EN");
-
   return (
-    <header className="flex items-center justify-end p-4 bg-gray-50 shadow-md">
+    <header className="flex items-center justify-end p-4 ">
       <div className="flex items-center space-x-4">
         <button className="flex items-center space-x-1 border p-2 rounded-full">
-          <span>{language}</span>
+          <span className="text-gray-800">{"EN"}</span>
         </button>
         <button className="flex items-center border space-x-1 p-2 rounded-full">
           <Image
@@ -31,7 +26,9 @@ export const Header = () => {
           />
 
           <div>
-            <div className="text-sm font-medium">María Moreno</div>
+            <div className="text-sm font-medium text-gray-900">
+              María Moreno
+            </div>
             <div className="text-xs text-gray-600">Admin</div>
           </div>
           <button className="flex items-center p-2 rounded">
@@ -42,10 +39,6 @@ export const Header = () => {
               height={12}
               priority
             />
-
-            {/* <span className="material-icons text-gray-600">
-              arrow_drop_down
-            </span> */}
           </button>
         </div>
       </div>

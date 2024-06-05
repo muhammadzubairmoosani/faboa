@@ -5,3 +5,5 @@ export * from "./authWrapper";
 export * from "./sidebar";
 export * from "./filtersAndSearch";
 export * from "./header";
+export * from "./memberTable";
+export * from "./toggle";

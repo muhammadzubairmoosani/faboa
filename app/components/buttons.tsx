@@ -6,6 +6,7 @@ interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 interface CustomCheckboxProps {
   checked: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 }
 
 export const CustomButton = ({
@@ -22,9 +23,12 @@ export const CustomCheckbox = ({
   children,
   checked,
   onChange,
+  className,
 }: PropsWithChildren<CustomCheckboxProps>) => {
   return (
-    <label className="custom-checkbox flex items-center cursor-pointer space-x-2">
+    <label
+      className={`custom-checkbox flex items-center cursor-pointer space-x-2 ${className}`}
+    >
       <input
         type="checkbox"
         className="hidden"
