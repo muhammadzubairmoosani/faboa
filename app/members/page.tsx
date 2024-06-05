@@ -22,7 +22,7 @@ export default function MembersPage() {
       countryCode: "B",
 
       phoneNumber: "+039-66677788",
-      Occupation: "Doctor",
+      occupation: "Doctor",
       dob: "1997-01-04",
       gender: "Female",
       maritalStatus: "Maritial Status",
@@ -40,7 +40,7 @@ export default function MembersPage() {
       countryCode: "E",
 
       phoneNumber: "+039-66677788",
-      Occupation: "Doctor",
+      occupation: "Doctor",
       dob: "1997-01-04",
       gender: "Female",
       maritalStatus: "Maritial Status",
@@ -58,7 +58,7 @@ export default function MembersPage() {
       countryCode: "V",
 
       phoneNumber: "+039-66677788",
-      Occupation: "Doctor",
+      occupation: "Doctor",
       dob: "1997-01-04",
       gender: "Female",
       maritalStatus: "Maritial Status",
