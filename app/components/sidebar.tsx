@@ -23,7 +23,11 @@ export const Sidebar = () => {
         isOpen ? "w-64" : "w-20"
       } bg-primary-700 h-screen transition-width duration-300`}
     >
-      <div className="flex items-center justify-between p-4 ">
+      <div
+        className={`flex items-center justify-between p-4 
+      ${isOpen ? "w-60" : "w-20"}
+     `}
+      >
         <div className="flex justify-center w-full">
           {isOpen ? (
             <Image

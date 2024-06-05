@@ -20,7 +20,6 @@ export default function MembersPage() {
       documentType: "ID",
       documentNumber: "SL345678",
       countryCode: "B",
-
       phoneNumber: "+039-66677788",
       occupation: "Doctor",
       dob: "1997-01-04",
@@ -38,13 +37,12 @@ export default function MembersPage() {
       documentType: "Passport",
       documentNumber: "A1234567",
       countryCode: "E",
-
       phoneNumber: "+039-66677788",
       occupation: "Doctor",
       dob: "1997-01-04",
       gender: "Female",
       maritalStatus: "Maritial Status",
-      status: "Pending",
+      status: "Approved",
     },
     {
       id: 3,
@@ -56,7 +54,6 @@ export default function MembersPage() {
       documentType: "ID",
       documentNumber: "ID987654",
       countryCode: "V",
-
       phoneNumber: "+039-66677788",
       occupation: "Doctor",
       dob: "1997-01-04",
@@ -113,7 +110,7 @@ export default function MembersPage() {
           />
           <div className="flex justify-between items-center mt-4">
             <button
-              className="flex items-center px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-gray-100"
+              className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700 rounded hover:bg-gray-100"
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
             >
@@ -130,7 +127,7 @@ export default function MembersPage() {
               {Array.from({ length: totalPages }, (_, index) => (
                 <button
                   key={index + 1}
-                  className={`px-4 py-2 rounded ${
+                  className={`px-4 py-2 rounded text-sm ${
                     currentPage === index + 1
                       ? "bg-gray-100 text-gray-800"
                       : "bg-white text-gray-800 hover:bg-gray-100"
@@ -142,7 +139,7 @@ export default function MembersPage() {
               ))}
             </div>
             <button
-              className="flex items-center px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-gray-100"
+              className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700 rounded hover:bg-gray-100"
               onClick={() =>
                 setCurrentPage((prev) => Math.min(prev + 1, totalPages))
               }

@@ -37,7 +37,7 @@ export const FiltersAndSearch = () => {
               height={20}
               priority
             />
-            <span className="text-gray-800">Import</span>
+            <span className="text-gray-800  text-xs">Import</span>
           </button>
 
           <button className="flex items-center space-x-2 border py-2 px-4 rounded-lg ">
@@ -49,9 +49,9 @@ export const FiltersAndSearch = () => {
               priority
             />
 
-            <span className="text-gray-800">Export</span>
+            <span className="text-gray-800  text-xs">Export</span>
           </button>
-          <button className="flex items-center space-x-2 bg-primary-500 text-white py-2 px-4 rounded-lg font-bold">
+          <button className="flex items-center space-x-2 bg-primary-500 text-white py-2 px-4 rounded-lg font-bold  text-xs">
             <Image src="/add.svg" alt="add" width={14} height={14} priority />
             <span>Member</span>
           </button>
@@ -100,7 +100,7 @@ export const FiltersAndSearch = () => {
               priority
             />
 
-            <span className="text-gray-600 ">More filters</span>
+            <span className="text-gray-600  text-xs ">More filters</span>
           </button>
         </div>
         <div className="flex items-center space-x-2 border py-2 px-4 rounded-lg">
@@ -115,7 +115,7 @@ export const FiltersAndSearch = () => {
           <input
             type="text"
             placeholder="Search"
-            className="outline-none bg-transparent"
+            className="outline-none bg-transparent text-gray-600  text-xs"
           />
         </div>
       </div>

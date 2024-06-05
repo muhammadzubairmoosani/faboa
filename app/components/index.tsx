@@ -7,3 +7,4 @@ export * from "./filtersAndSearch";
 export * from "./header";
 export * from "./memberTable";
 export * from "./toggle";
+export * from "./status";
