@@ -61,11 +61,11 @@ export const MemberTable = ({
   // const totalPages = Math.ceil(members.length / itemsPerPage);
 
   return (
-    <div className="overflow-x-auto no-scrollbar">
-      <table className="min-w-full  bg-white border border-gray-200 rounded-lg shadow-md">
+    <div className="overflow-x-auto no-scrollbar border-2 border-[#E4E7EC] rounded-xl mr-4">
+      <table className="min-w-full  bg-white  ">
         <thead className="bg-gray-100">
           <tr className="border-b">
-            <th className="py-1 px-4 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-100 drop-shadow-lg">
+            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-100 drop-shadow-lg flex items-center">
               <CustomCheckbox
                 checked={selectedAll}
                 onChange={onSelectAll}
@@ -79,85 +79,83 @@ export const MemberTable = ({
               </span>
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap "
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap "
               onClick={() => handleSort("email")}
             >
               Email Address
             </th>
 
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("address")}
             >
               Street Address
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("city")}
             >
               City
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("documentType")}
             >
               Document Type
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("documentNumber")}
             >
               Document Number
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("countryCode")}
             >
               Country Code
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("phoneNumber")}
             >
               Phone Number
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("occupation")}
             >
               Occupation
             </th>
 
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("dob")}
             >
               Date of Birth
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("gender")}
             >
               Gender
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
               onClick={() => handleSort("maritalStatus")}
             >
               Marital Status
             </th>
             <th
-              className="py-1 px-4 text-left text-xs text-gray-600 cursor-pointer  whitespace-nowrap"
+              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer  whitespace-nowrap"
               onClick={() => handleSort("status")}
             >
               Status
             </th>
-            <th className="py-1 px-4 text-left text-xs text-gray-600 w-20 sticky right-20 bg-gray-100 z-10 drop-shadow-lg">
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-100 z-10 drop-shadow-lg">
               Active
             </th>
-            <th className="py-1 px-4 text-left text-xs text-gray-600 w-20 sticky right-0 bg-gray-100 z-10">
-              Delete
-            </th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-100 z-10"></th>
           </tr>
         </thead>
         <tbody>
@@ -219,11 +217,13 @@ export const MemberTable = ({
               <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
                 <Status status={member.status} />
               </td>
-              <td className="p-4 w-20 sticky right-20 bg-white z-10 drop-shadow-lg">
+              {/* <td className="p-4 w-20 sticky right-20 bg-white z-10 drop-shadow-lg text-center "> */}
+              <td className="p-4 sticky right-20 bg-white z-10 drop-shadow-lg text-center ">
                 <Toggle />
               </td>
-              <td className="p-4 w-20 sticky right-0 bg-white z-10 ">
-                <button className="w-12 flex justify-center">
+              {/* <td className="p-4 w-20 sticky right-0 bg-white z-10  "> */}
+              <td className="p-4  sticky right-0 bg-white z-10  ">
+                <button className="w-12 flex justify-center items-center mx-auto">
                   <Image
                     src="/trash.svg"
                     alt="notification"

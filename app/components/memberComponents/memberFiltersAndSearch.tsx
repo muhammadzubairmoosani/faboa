@@ -10,7 +10,7 @@ export const MemberFiltersAndSearch = () => {
   const tabs1 = ["All", "Approved", "Pending", "Rejected"];
 
   return (
-    <header className="p-4 mb-4 ">
+    <header className="p-4 mb-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-2">
           <h2 className="text-2xl text-gradient font-berlingske-semibold">
@@ -103,7 +103,7 @@ export const MemberFiltersAndSearch = () => {
             <span className="text-gray-600  text-xs ">More filters</span>
           </button>
         </div>
-        <div className="flex items-center space-x-2 border py-2 px-4 rounded-lg">
+        <div className="flex items-center space-x-2 border py-2 px-4 rounded-lg w-full max-w-[367px]">
           <Image
             src="/search.svg"
             alt="search"
@@ -115,7 +115,7 @@ export const MemberFiltersAndSearch = () => {
           <input
             type="text"
             placeholder="Search"
-            className="outline-none bg-transparent text-gray-600  text-xs"
+            className="outline-none bg-transparent text-gray-600  text-xs w-full"
           />
         </div>
       </div>

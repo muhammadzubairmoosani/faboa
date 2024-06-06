@@ -60,7 +60,7 @@ export default function MembersPage() {
             selectedMembers={selectedMembers}
             onDelete={handleDelete}
           />
-          <div className="flex justify-between items-center mt-10">
+          <div className="flex justify-between items-center mt-10 mx-4">
             <button
               className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700  rounded-lg hover:bg-gray-100"
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
@@ -79,7 +79,7 @@ export default function MembersPage() {
               {Array.from({ length: totalPages }, (_, index) => (
                 <button
                   key={index + 1}
-                  className={`px-4 py-2  rounded-lg text-sm font-medium ${
+                  className={`px-5 py-3 rounded-lg text-sm font-medium ${
                     currentPage === index + 1
                       ? "bg-gray-50 text-gray-600"
                       : "bg-white text-gray-600 hover:bg-gray-100"
