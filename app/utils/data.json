@@ -1,0 +1,55 @@
+{
+  "allMembers": [
+    {
+      "id": 1,
+      "name": "Marta Ruiz",
+      "username": "olivia",
+      "email": "marta.ruiz@email.com",
+      "address": "123 Calle Mayor",
+      "city": "Barcelona",
+      "documentType": "ID",
+      "documentNumber": "SL345678",
+      "countryCode": "B",
+      "phoneNumber": "+039-66677788",
+      "occupation": "Doctor",
+      "dob": "1997-01-04",
+      "gender": "Female",
+      "maritalStatus": "Maritial Status",
+      "status": "Pending"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "username": "john",
+      "email": "john.doe@email.com",
+      "address": "456 Main St",
+      "city": "Madrid",
+      "documentType": "Passport",
+      "documentNumber": "A1234567",
+      "countryCode": "E",
+      "phoneNumber": "+039-66677788",
+      "occupation": "Doctor",
+      "dob": "1997-01-04",
+      "gender": "Female",
+      "maritalStatus": "Maritial Status",
+      "status": "Approved"
+    },
+    {
+      "id": 3,
+      "name": "Jane Smith",
+      "username": "jane",
+      "email": "jane.smith@email.com",
+      "address": "789 Central Blvd",
+      "city": "Valencia",
+      "documentType": "ID",
+      "documentNumber": "ID987654",
+      "countryCode": "V",
+      "phoneNumber": "+039-66677788",
+      "occupation": "Doctor",
+      "dob": "1997-01-04",
+      "gender": "Female",
+      "maritalStatus": "Maritial Status",
+      "status": "Pending"
+    }
+  ]
+}

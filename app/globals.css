@@ -57,21 +57,6 @@
   }
 }
 
-/* .font-heebo-normal {
-  font-weight: 400;
-  font-family: var(--heebo-font);
-}
-
-.font-heebo-medium {
-  font-weight: 500;
-  font-family: var(--heebo-font);
-}
-
-.font-heebo-bold {
-  font-weight: 700;
-  font-family: var(--heebo-font);
-} */
-
 .font-heebo-normal {
   font-weight: 400;
   font-family: var(--heebo-font);
@@ -118,10 +103,8 @@ body {
 }
 
 .text-gradient {
-  color: #c1963b;
-  /* color: linear-gradient(351deg, #c1963b -21.67%, #745a23 130.38%); */
-  /* background: var(
-    --Tertiary-Gradient-1,
-    linear-gradient(351deg, #c1963b -21.67%, #745a23 130.38%)
-  ); */
+  background: linear-gradient(350.87deg, #c1963b -21.67%, #745a23 130.38%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

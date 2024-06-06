@@ -3,14 +3,14 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export const FiltersAndSearch = () => {
+export const MemberFiltersAndSearch = () => {
   const [activeTab, setActiveTab] = useState("Active");
 
   const tabs = ["All", "Active", "Inactive"];
   const tabs1 = ["All", "Approved", "Pending", "Rejected"];
 
   return (
-    <header className="p-4 ">
+    <header className="p-4 mb-4 ">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-2">
           <h2 className="text-2xl text-gradient font-berlingske-semibold">

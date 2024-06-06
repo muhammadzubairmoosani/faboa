@@ -1,67 +1,20 @@
 "use client";
 import Image from "next/image";
 import { Member } from "../components/types";
+import { allMembers } from "../utils/data.json";
 
 import { useState } from "react";
-import { FiltersAndSearch, Header, MembersTable, Sidebar } from "../components";
+import {
+  MemberFiltersAndSearch,
+  Header,
+  Sidebar,
+  MemberTable,
+} from "../components";
 
 export default function MembersPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedMembers, setSelectedMembers] = useState<number[]>([]);
   const ITEMS_PER_PAGE = 2;
-  const allMembers = [
-    {
-      id: 1,
-      name: "Marta Ruiz",
-      username: "olivia",
-      email: "marta.ruiz@email.com",
-      address: "123 Calle Mayor",
-      city: "Barcelona",
-      documentType: "ID",
-      documentNumber: "SL345678",
-      countryCode: "B",
-      phoneNumber: "+039-66677788",
-      occupation: "Doctor",
-      dob: "1997-01-04",
-      gender: "Female",
-      maritalStatus: "Maritial Status",
-      status: "Pending",
-    },
-    {
-      id: 2,
-      name: "John Doe",
-      username: "john",
-      email: "john.doe@email.com",
-      address: "456 Main St",
-      city: "Madrid",
-      documentType: "Passport",
-      documentNumber: "A1234567",
-      countryCode: "E",
-      phoneNumber: "+039-66677788",
-      occupation: "Doctor",
-      dob: "1997-01-04",
-      gender: "Female",
-      maritalStatus: "Maritial Status",
-      status: "Approved",
-    },
-    {
-      id: 3,
-      name: "Jane Smith",
-      username: "jane",
-      email: "jane.smith@email.com",
-      address: "789 Central Blvd",
-      city: "Valencia",
-      documentType: "ID",
-      documentNumber: "ID987654",
-      countryCode: "V",
-      phoneNumber: "+039-66677788",
-      occupation: "Doctor",
-      dob: "1997-01-04",
-      gender: "Female",
-      maritalStatus: "Maritial Status",
-      status: "Pending",
-    },
-  ];
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentMembers: any = allMembers.slice(
@@ -95,12 +48,11 @@ export default function MembersPage() {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-1 bg-white">
+      <div className="flex-1 bg-white overflow-hidden">
         <Header />
-
         <div className="p-4">
-          <FiltersAndSearch />
-          <MembersTable
+          <MemberFiltersAndSearch />
+          <MemberTable
             members={currentMembers}
             onSelectAll={handleSelectAll}
             selectedAll={selectedMembers.length === currentMembers.length}
@@ -108,9 +60,9 @@ export default function MembersPage() {
             selectedMembers={selectedMembers}
             onDelete={handleDelete}
           />
-          <div className="flex justify-between items-center mt-4">
+          <div className="flex justify-between items-center mt-10">
             <button
-              className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700 rounded hover:bg-gray-100"
+              className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700  rounded-lg hover:bg-gray-100"
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
             >
@@ -127,10 +79,10 @@ export default function MembersPage() {
               {Array.from({ length: totalPages }, (_, index) => (
                 <button
                   key={index + 1}
-                  className={`px-4 py-2 rounded text-sm ${
+                  className={`px-4 py-2  rounded-lg text-sm font-medium ${
                     currentPage === index + 1
-                      ? "bg-gray-100 text-gray-800"
-                      : "bg-white text-gray-800 hover:bg-gray-100"
+                      ? "bg-gray-50 text-gray-600"
+                      : "bg-white text-gray-600 hover:bg-gray-100"
                   }`}
                   onClick={() => setCurrentPage(index + 1)}
                 >
@@ -139,7 +91,7 @@ export default function MembersPage() {
               ))}
             </div>
             <button
-              className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700 rounded hover:bg-gray-100"
+              className="flex items-center px-4 py-2 bg-white border text-sm border-gray-300 text-gray-700  rounded-lg hover:bg-gray-100"
               onClick={() =>
                 setCurrentPage((prev) => Math.min(prev + 1, totalPages))
               }
