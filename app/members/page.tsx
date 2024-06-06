@@ -14,7 +14,7 @@ import {
 export default function MembersPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedMembers, setSelectedMembers] = useState<number[]>([]);
-  const ITEMS_PER_PAGE = 2;
+  const ITEMS_PER_PAGE = 5;
 
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentMembers: any = allMembers.slice(
