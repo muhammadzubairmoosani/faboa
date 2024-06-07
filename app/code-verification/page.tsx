@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, Suspense } from "react";
-import { CustomButton, AuthWrapper } from "../components";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useState } from "react";
+import { AuthWrapper, CustomButton } from "../components";
 
 const CodeVerificationContent = () => {
   const [verificationCode, setVerificationCode] = useState(["", "", "", ""]);
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
+  const router = useRouter();
 
   const updateVerificationCode = (index: number, value: string) => {
     const newValues = [...verificationCode];
@@ -51,6 +52,7 @@ const CodeVerificationContent = () => {
         <CustomButton
           className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full"
           type="submit"
+          onClick={() => router.push("/reset-password")}
         >
           Confirm
         </CustomButton>

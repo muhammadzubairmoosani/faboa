@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { CustomButton, InputField, AuthWrapper } from "../components";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { AuthWrapper, CustomButton, InputField } from "../components";
 
 export default function ResetPassword() {
   const [newPassword, setNewPassword] = useState("");
   const [newRepeatPassword, setNewRepeatPassword] = useState("");
+  const router = useRouter();
 
   return (
     <AuthWrapper>
@@ -39,6 +41,7 @@ export default function ResetPassword() {
       <CustomButton
         className="bg-primary-700 font-heebo-medium rounded-full text-white py-4 px-4 w-full mt-6"
         type="submit"
+        onClick={() => router.push("/password-changed")}
       >
         Confirm
       </CustomButton>
