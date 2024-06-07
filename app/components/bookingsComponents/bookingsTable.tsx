@@ -2,11 +2,9 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { CustomCheckbox } from "../buttons";
-import { Status } from "../status";
-import { Toggle } from "../toggle";
 import { Itineraries } from "../types";
 
-export interface ItinerariesTableProps {
+export interface BookingsTableTableProps {
   members: Itineraries[];
   onSelectAll: () => void;
   selectedAll: boolean;
@@ -22,7 +20,7 @@ export const BookingsTable = ({
   onSelectMember,
   selectedMembers,
   onDelete,
-}: ItinerariesTableProps) => {
+}: BookingsTableTableProps) => {
   const [sortedColumn, setSortedColumn] = useState<keyof Itineraries | null>(
     null
   );
