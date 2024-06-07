@@ -115,6 +115,19 @@ export const Sidebar = () => {
             {isOpen && <span className="ml-4">Revenue</span>}
           </a>
         </Link>
+        <Link legacyBehavior href="/admins">
+          <a className="flex items-center p-4 text-gray-100 hover:bg-primary-600 hover:rounded-lg">
+            <Image
+              src="/admins.svg"
+              alt="Admins"
+              width={20}
+              height={20}
+              priority
+            />
+            {isOpen && <span className="ml-4">Admins</span>}
+          </a>
+        </Link>
+
         <Link legacyBehavior href="/cloud">
           <a className="flex items-center p-4 text-gray-100 hover:bg-primary-600 hover:rounded-lg">
             <Image

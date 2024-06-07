@@ -5,10 +5,10 @@ import { allMembers } from "../utils/data.json";
 
 import { useState } from "react";
 import {
-  AdminsFiltersAndSearch,
+  MemberFiltersAndSearch,
   Header,
   Sidebar,
-  AdminsTable,
+  MemberTable,
 } from "../components";
 
 export default function MembersPage() {
@@ -51,8 +51,8 @@ export default function MembersPage() {
       <div className="flex-1 bg-white overflow-hidden">
         <Header />
         <div className="p-4">
-          <AdminsFiltersAndSearch />
-          <AdminsTable
+          <MemberFiltersAndSearch />
+          <MemberTable
             members={currentMembers}
             onSelectAll={handleSelectAll}
             selectedAll={selectedMembers.length === currentMembers.length}
