@@ -17,7 +17,7 @@ export const BookingsFiltersAndSearch = () => {
             Bookings
           </h2>
 
-          <span className="bg-secondary-50 text-gradient  px-2 py-1 rounded-lg flex gap-2">
+          <span className="bg-gradient px-2 py-1 font-medium rounded-lg flex gap-2">
             <Image
               src="/booking.svg"
               alt="Members"
@@ -25,7 +25,7 @@ export const BookingsFiltersAndSearch = () => {
               height={20}
               priority
             />
-            116
+            <span className="text-gradient">87</span>
           </span>
         </div>
         <div className="flex items-center space-x-4">
@@ -37,7 +37,7 @@ export const BookingsFiltersAndSearch = () => {
               height={20}
               priority
             />
-            <span className="text-gray-800  text-xs">Import</span>
+            <span className="text-gray-800  text-sm">Import</span>
           </button>
 
           <button className="flex items-center space-x-2 border py-2 px-4 rounded-lg ">
@@ -49,9 +49,9 @@ export const BookingsFiltersAndSearch = () => {
               priority
             />
 
-            <span className="text-gray-800  text-xs">Export</span>
+            <span className="text-gray-800  text-sm">Export</span>
           </button>
-          <button className="flex items-center space-x-2 bg-primary-500 text-white py-2 px-4 rounded-lg font-bold  text-xs">
+          <button className="flex items-center space-x-2 bg-primary-500 text-white py-2 px-4 rounded-lg font-bold  text-sm">
             <Image src="/add.svg" alt="add" width={14} height={14} priority />
             <span>Booking</span>
           </button>
@@ -64,13 +64,13 @@ export const BookingsFiltersAndSearch = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 text-xs rounded-lg font-medium ${
-                  activeTab === tab
-                    ? "bg-secondary-100 text-gradient"
-                    : "text-gray-600"
+                className={`px-4 py-2 text-sm rounded-lg font-medium ${
+                  activeTab === tab ? "bg-gradient" : "text-gray-600"
                 }`}
               >
-                {tab}
+                <span className={`${activeTab === tab && "text-gradient"}`}>
+                  {tab}
+                </span>
               </button>
             ))}
           </div>
@@ -80,13 +80,13 @@ export const BookingsFiltersAndSearch = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 text-xs rounded-lg font-medium ${
-                  activeTab === tab
-                    ? "bg-secondary-100 text-gradient"
-                    : "text-gray-600"
+                className={`px-4 py-2 text-sm rounded-lg font-medium ${
+                  activeTab === tab ? "bg-gradient" : "text-gray-600"
                 }`}
               >
-                {tab}
+                <span className={`${activeTab === tab && "text-gradient"}`}>
+                  {tab}
+                </span>
               </button>
             ))}
           </div>
@@ -100,7 +100,7 @@ export const BookingsFiltersAndSearch = () => {
               priority
             />
 
-            <span className="text-gray-600  text-xs ">More filters</span>
+            <span className="text-gray-600  text-sm ">More filters</span>
           </button>
         </div>
         <div className="flex items-center space-x-2 border py-2 px-4 rounded-lg w-full max-w-[367px]">
@@ -115,7 +115,7 @@ export const BookingsFiltersAndSearch = () => {
           <input
             type="text"
             placeholder="Search"
-            className="outline-none bg-transparent text-gray-600  text-xs w-full"
+            className="outline-none bg-transparent text-gray-600  text-sm w-full"
           />
         </div>
       </div>

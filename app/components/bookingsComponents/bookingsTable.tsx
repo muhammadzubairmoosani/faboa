@@ -23,7 +23,9 @@ export const BookingsTable = ({
   selectedMembers,
   onDelete,
 }: ItinerariesTableProps) => {
-  const [sortedColumn, setSortedColumn] = useState<keyof Itineraries | null>(null);
+  const [sortedColumn, setSortedColumn] = useState<keyof Itineraries | null>(
+    null
+  );
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5);
@@ -63,9 +65,9 @@ export const BookingsTable = ({
   return (
     <div className="overflow-x-auto no-scrollbar border-2 border-[#E4E7EC] rounded-xl mr-4">
       <table className="min-w-full  bg-white  ">
-        <thead className="bg-gray-100">
+        <thead className="bg-gray-25">
           <tr className="border-b">
-            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-100 drop-shadow-lg flex items-center">
+            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-25 flex items-center">
               <CustomCheckbox
                 checked={selectedAll}
                 onChange={onSelectAll}
@@ -127,10 +129,8 @@ export const BookingsTable = ({
             >
               People
             </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-100 z-10 drop-shadow-lg">
-
-            </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-100 z-10"></th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-25 z-10 drop-shadow-lg"></th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-25 z-10"></th>
           </tr>
         </thead>
         <tbody>
@@ -145,7 +145,9 @@ export const BookingsTable = ({
                 <div className="flex items-center space-x-2">
                   <div>
                     <div className="text-gray-900">{member.itineraries}</div>
-                    <div className="text-gray-600 ">@{member.subItineraries}</div>
+                    <div className="text-gray-600 ">
+                      @{member.subItineraries}
+                    </div>
                   </div>
                 </div>
               </td>

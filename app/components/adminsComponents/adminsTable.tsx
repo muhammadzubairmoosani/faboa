@@ -63,9 +63,9 @@ export const AdminsTable = ({
   return (
     <div className="overflow-x-auto no-scrollbar border-2 border-[#E4E7EC] rounded-xl mr-4">
       <table className="min-w-full  bg-white  ">
-        <thead className="bg-gray-100">
+        <thead className="bg-gray-25">
           <tr className="border-b">
-            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-100 drop-shadow-lg flex items-center">
+            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-25 flex items-center">
               <CustomCheckbox
                 checked={selectedAll}
                 onChange={onSelectAll}
@@ -152,10 +152,10 @@ export const AdminsTable = ({
             >
               Status
             </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-100 z-10 drop-shadow-lg">
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-25 z-10 drop-shadow-lg">
               Active
             </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-100 z-10"></th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-25 z-10"></th>
           </tr>
         </thead>
         <tbody>

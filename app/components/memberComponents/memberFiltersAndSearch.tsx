@@ -25,7 +25,7 @@ export const MemberFiltersAndSearch = () => {
               height={20}
               priority
             />
-            <span className="text-gradient ">87</span>
+            <span className="text-gradient">87</span>
           </span>
         </div>
         <div className="flex items-center space-x-4">
