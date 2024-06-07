@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { CustomCheckbox } from "../buttons";
 import { Status } from "../status";
 import { Toggle } from "../toggle";
-import { Member } from "../types";
+import { Itineraries } from "../types";
 
-export interface MemberTableProps {
-  members: Member[];
+export interface ItinerariesTableProps {
+  members: Itineraries[];
   onSelectAll: () => void;
   selectedAll: boolean;
   onSelectMember: (memberId: number) => void;
@@ -15,20 +15,20 @@ export interface MemberTableProps {
   onDelete: (memberId: number) => void;
 }
 
-export const MemberTable = ({
+export const BookingsTable = ({
   members,
   onSelectAll,
   selectedAll,
   onSelectMember,
   selectedMembers,
   onDelete,
-}: MemberTableProps) => {
-  const [sortedColumn, setSortedColumn] = useState<keyof Member | null>(null);
+}: ItinerariesTableProps) => {
+  const [sortedColumn, setSortedColumn] = useState<keyof Itineraries | null>(null);
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5);
-  const [sortedMembers, setSortedMembers] = useState<Member[]>([]);
-  const [paginatedMembers, setPaginatedMembers] = useState<Member[]>([]);
+  const [sortedMembers, setSortedMembers] = useState<Itineraries[]>([]);
+  const [paginatedMembers, setPaginatedMembers] = useState<Itineraries[]>([]);
 
   useEffect(() => {
     const direction = sortDirection === "asc" ? 1 : -1;
@@ -51,7 +51,7 @@ export const MemberTable = ({
     setPaginatedMembers(paginated);
   }, [sortedMembers, currentPage, itemsPerPage]);
 
-  const handleSort = (column: keyof Member) => {
+  const handleSort = (column: keyof Itineraries) => {
     const direction =
       sortedColumn === column && sortDirection === "asc" ? "desc" : "asc";
     setSortedColumn(column);
@@ -62,10 +62,10 @@ export const MemberTable = ({
 
   return (
     <div className="overflow-x-auto no-scrollbar border-2 border-[#E4E7EC] rounded-xl mr-4">
-      <table className="min-w-full  bg-white">
-        <thead className="bg-gray-25">
+      <table className="min-w-full  bg-white  ">
+        <thead className="bg-gray-100">
           <tr className="border-b">
-            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-25 drop-shadow-lg flex items-center">
+            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-100 drop-shadow-lg flex items-center">
               <CustomCheckbox
                 checked={selectedAll}
                 onChange={onSelectAll}
@@ -73,89 +73,64 @@ export const MemberTable = ({
               />
               <span
                 className="cursor-pointer"
-                onClick={() => handleSort("name")}
+                onClick={() => handleSort("itineraries")}
               >
-                Full Name
+                Booking
               </span>
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap "
-              onClick={() => handleSort("email")}
+              onClick={() => handleSort("name")}
             >
-              Email Address
+              Name
             </th>
 
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("address")}
+              onClick={() => handleSort("lastName")}
             >
-              Street Address
+              Last Name
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("city")}
+              onClick={() => handleSort("nationality")}
             >
-              City
+              Nationality
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("documentType")}
+              onClick={() => handleSort("supplierName")}
             >
-              Document Type
+              Supplier Name
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("documentNumber")}
+              onClick={() => handleSort("category")}
             >
-              Document Number
+              Category
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("countryCode")}
+              onClick={() => handleSort("subcategory")}
             >
-              Country Code
+              Subcategory
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("phoneNumber")}
+              onClick={() => handleSort("price")}
             >
-              Phone Number
+              Price
             </th>
             <th
               className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("occupation")}
+              onClick={() => handleSort("people")}
             >
-              Occupation
+              People
             </th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-100 z-10 drop-shadow-lg">
 
-            <th
-              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("dob")}
-            >
-              Date of Birth
             </th>
-            <th
-              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("gender")}
-            >
-              Gender
-            </th>
-            <th
-              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer whitespace-nowrap"
-              onClick={() => handleSort("maritalStatus")}
-            >
-              Marital Status
-            </th>
-            <th
-              className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 cursor-pointer  whitespace-nowrap"
-              onClick={() => handleSort("status")}
-            >
-              Status
-            </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-25 z-10 drop-shadow-lg">
-              Active
-            </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-25 z-10"></th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-100 z-10"></th>
           </tr>
         </thead>
         <tbody>
@@ -168,6 +143,23 @@ export const MemberTable = ({
                   className="mr-2"
                 />
                 <div className="flex items-center space-x-2">
+                  <div>
+                    <div className="text-gray-900">{member.itineraries}</div>
+                    <div className="text-gray-600 ">@{member.subItineraries}</div>
+                  </div>
+                </div>
+              </td>
+              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
+                {member.name}
+              </td>
+              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
+                {member.lastName}
+              </td>
+              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
+                {member.nationality}
+              </td>
+              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
+                <div className="flex items-center space-x-2">
                   <Image
                     src={`/Avatar.png`}
                     alt={member.name}
@@ -176,53 +168,23 @@ export const MemberTable = ({
                     className="rounded-full"
                   />
                   <div>
-                    <div className="text-gray-900">{member.name}</div>
-                    <div className="text-gray-600 ">@{member.username}</div>
+                    <div className="text-gray-900">{member.supplierName}</div>
                   </div>
                 </div>
               </td>
               <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.email}
+                {member.category}
               </td>
               <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.address}
+                {member.subcategory}
               </td>
               <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.city}
+                {member.price}
               </td>
               <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.documentType}
+                {member.people}
               </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.documentNumber}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.countryCode}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.phoneNumber}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.occupation}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.dob}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.gender}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                {member.maritalStatus}
-              </td>
-              <td className="p-4 text-sm text-gray-600 whitespace-nowrap">
-                <Status status={member.status} />
-              </td>
-              {/* <td className="p-4 w-20 sticky right-20 bg-white z-10 drop-shadow-lg text-center "> */}
               <td className="p-4 sticky right-20 bg-white z-10 drop-shadow-lg text-center ">
-                <Toggle />
-              </td>
-              {/* <td className="p-4 w-20 sticky right-0 bg-white z-10  "> */}
-              <td className="p-4  sticky right-0 bg-white z-10  ">
                 <button className="w-12 flex justify-center items-center mx-auto">
                   <Image
                     src="/trash.svg"
@@ -234,29 +196,22 @@ export const MemberTable = ({
                   />
                 </button>
               </td>
+
+              <td className="p-4  sticky right-0 bg-white z-10  ">
+                <button className="w-12 flex justify-center items-center mx-auto">
+                  <Image
+                    src="/edit-icon.svg"
+                    alt="notification"
+                    width={20}
+                    height={20}
+                    onClick={() => onDelete(member.id)}
+                  />
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
-      {/* <div className="flex justify-between mt-4">
-        <button
-          onClick={() => setCurrentPage(currentPage - 1)}
-          disabled={currentPage === 1}
-          className="px-4 py-2 bg-gray-300 text-gray-700 rounded"
-        >
-          Previous
-        </button>
-        <span>
-          Page {currentPage} of {totalPages}
-        </span>
-        <button
-          onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className="px-4 py-2 bg-gray-300 text-gray-700 rounded"
-        >
-          Next
-        </button>
-      </div> */}
     </div>
   );
 };

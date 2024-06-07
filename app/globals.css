@@ -108,3 +108,11 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.bg-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(193, 150, 59, 0.1) 0%,
+    rgba(116, 90, 35, 0.1) 100%
+  );
+}

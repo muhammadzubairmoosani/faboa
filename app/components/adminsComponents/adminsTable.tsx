@@ -6,7 +6,7 @@ import { Status } from "../status";
 import { Toggle } from "../toggle";
 import { Member } from "../types";
 
-export interface MemberTableProps {
+export interface AdminsTableProps {
   members: Member[];
   onSelectAll: () => void;
   selectedAll: boolean;
@@ -15,14 +15,14 @@ export interface MemberTableProps {
   onDelete: (memberId: number) => void;
 }
 
-export const MemberTable = ({
+export const AdminsTable = ({
   members,
   onSelectAll,
   selectedAll,
   onSelectMember,
   selectedMembers,
   onDelete,
-}: MemberTableProps) => {
+}: AdminsTableProps) => {
   const [sortedColumn, setSortedColumn] = useState<keyof Member | null>(null);
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,10 +62,10 @@ export const MemberTable = ({
 
   return (
     <div className="overflow-x-auto no-scrollbar border-2 border-[#E4E7EC] rounded-xl mr-4">
-      <table className="min-w-full  bg-white">
-        <thead className="bg-gray-25">
+      <table className="min-w-full  bg-white  ">
+        <thead className="bg-gray-100">
           <tr className="border-b">
-            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-25 drop-shadow-lg flex items-center">
+            <th className="py-3 pl-4 pr-16 text-left text-xs text-gray-600 w-64 sticky left-0 z-10 bg-gray-100 drop-shadow-lg flex items-center">
               <CustomCheckbox
                 checked={selectedAll}
                 onChange={onSelectAll}
@@ -152,10 +152,10 @@ export const MemberTable = ({
             >
               Status
             </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-25 z-10 drop-shadow-lg">
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-20 bg-gray-100 z-10 drop-shadow-lg">
               Active
             </th>
-            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-25 z-10"></th>
+            <th className="p-3  text-center text-xs text-gray-600  sticky right-0 bg-gray-100 z-10"></th>
           </tr>
         </thead>
         <tbody>

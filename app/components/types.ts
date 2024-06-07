@@ -15,3 +15,41 @@ export interface Member {
   maritalStatus: string;
   status: string;
 }
+
+export interface Supplier {
+  id: number;
+  name: string;
+  category: string;
+  address: string;
+  accountManager: string;
+  accountManager2: string;
+  phoneNumber: string;
+  email: string;
+}
+
+export interface Service {
+  id: number;
+  service: string;
+  subService: string;
+  name: string;
+  username: string;
+  address: string;
+  city: string;
+  company: string;
+  accountManagerName: string;
+  phoneNumber: string;
+}
+
+export interface Itineraries {
+  id: number;
+  itineraries: string;
+  subItineraries: string;
+  name: string;
+  lastName: string;
+  nationality: string;
+  supplierName: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  people: number;
+}

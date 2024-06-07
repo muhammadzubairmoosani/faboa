@@ -153,5 +153,326 @@
       "maritalStatus": "Maritial Status",
       "status": "Pending"
     }
+  ],
+  "supplier": [
+    {
+      "id": 1,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 2,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 3,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 4,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 5,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 6,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 7,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 8,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    },
+    {
+      "id": 9,
+      "name": "Marta Ruiz",
+      "category": "Hotel",
+      "address": "123 Calle Mayor",
+      "accountManager": "Carmen Nufiez",
+      "accountManager2": "Carmen Nufiez",
+      "phoneNumber": "93 012 3456",
+      "email": "marta.ruiz@email.com"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 2,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 3,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 4,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 5,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 6,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 7,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 8,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    },
+    {
+      "id": 9,
+      "service": "Lhary",
+      "subService": "Local",
+      "name": "Marta Ruiz",
+      "username": "john",
+      "address": "123 Calle Mayor",
+      "city": "Madrid",
+      "company": "Spain",
+      "accountManagerName": "Marta Ruiz",
+      "phoneNumber": "93 567 8901"
+    }
+  ],
+  "itineraries": [
+    {
+      "id": 1,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 2,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 3,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 4,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 5,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 6,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 7,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 8,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    },
+    {
+      "id": 9,
+      "itineraries": "Lhary",
+      "subItineraries": "Local",
+      "name": "Javier",
+      "lastName": "González",
+      "nationality": "ES",
+      "supplierName": "CoverManager",
+      "category": "Restaurant",
+      "subcategory": "Local",
+      "price": 0,
+      "people": 4
+    }
   ]
 }
