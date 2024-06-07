@@ -103,7 +103,7 @@ export const Sidebar = () => {
             {isOpen && <span className="ml-4">Bookings</span>}
           </a>
         </Link>
-        <Link legacyBehavior href="/revenue">
+        {/* <Link legacyBehavior href="/revenue">
           <a className="flex items-center p-4 text-gray-100 hover:bg-primary-600 hover:rounded-lg">
             <Image
               src="/revenue.svg"
@@ -114,7 +114,7 @@ export const Sidebar = () => {
             />
             {isOpen && <span className="ml-4">Revenue</span>}
           </a>
-        </Link>
+        </Link> */}
         <Link legacyBehavior href="/admins">
           <a className="flex items-center p-4 text-gray-100 hover:bg-primary-600 hover:rounded-lg">
             <Image
